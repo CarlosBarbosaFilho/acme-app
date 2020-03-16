@@ -1,0 +1,6 @@
+*.project
+*.settings
+*.class
+/target/
+*.attach_pid2084
+*.attach_pid4694
