@@ -1,6 +1,7 @@
 *.project
 *.settings
 *.class
-/target/
+*target/
 *.attach_pid2084
 *.attach_pid4694
+*.factorypath
