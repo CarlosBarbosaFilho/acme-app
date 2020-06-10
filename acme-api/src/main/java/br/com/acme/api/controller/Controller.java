@@ -22,13 +22,16 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/")
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class Controller {
 
 	private final Service service;
 
+	public Controller(Service service) {
+		this.service = service;
+	}
+
 	@GetMapping
-	public ResponseEntity<Iterable<Model>> models(Pageable pageable){
-		return new ResponseEntity<>(this.service.models(pageable),HttpStatus.OK);
+	public ResponseEntity<Iterable<Model>> models(Pageable pageable) {
+		return new ResponseEntity<>(this.service.models(pageable), HttpStatus.OK);
 	}
 }
